@@ -19,7 +19,7 @@ function DigitalClock() {
     const seconds = time.getSeconds();
     const meridiem = hours >= 12 ? "PM" : "AM";
 
-    hours = hours % 12 || 12;
+    hours = hours % 12 || 12; //put condition such we can define in above expression whether it is AM or PM
 
     return `${padZero(hours)}:${padZero(minutes)}:${padZero(
       seconds
@@ -27,7 +27,7 @@ function DigitalClock() {
   }
 
   function padZero(number) {
-    return (number < 10 ? "0" : "") + number;
+    return (number < 10 ? "0" : "") + number; // formatting the time to 2 digits
   }
 
   return (
